@@ -1,0 +1,22 @@
+Package: uiothemes
+Type: Package
+Title: Branding themes for the University of Oslo, Norway
+Version: 0.1.0
+Authors@R: person("Athanasia Mo", "Mowinckel", 
+                  email = "a.m.mowinckel@psykologi.uio.no", 
+                  role = c("aut", "cre"),
+                  comment = c(ORCID = "0000-0002-5756-0223"))
+Description: Contains templates, themeing files and functions.
+  Made specifically for branding purposes for the University of Oslo.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    ggplot2,
+    distill,
+    xaringan,
+    whisker
+Suggests: 
+    roxygen2,
+    knitr
+RoxygenNote: 7.1.1
