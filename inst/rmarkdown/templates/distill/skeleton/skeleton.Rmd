@@ -1,0 +1,41 @@
+---
+title: "Untitled"
+description: |
+  A new article created using the UiO Distill format.
+author:
+  - name: Athanasia Monika Mowinckel
+    url: https://drmowinckels.io
+    affiliation: Center for Lifespan Changes in Brain and Cognition, University of Oslo
+    affiliation_url: https://oslobrains.no
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    theme: uio-distill.css
+    toc: true
+    highlight: "uio_highlight.theme"
+    highlight_downlit: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+
+## Embed code
+```{r}
+plot(mtcars$mpg)
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(mpg)) + 
+  geom_bar()
+
+```
+

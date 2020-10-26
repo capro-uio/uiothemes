@@ -1,0 +1,4 @@
+name: UiO Interactive Tutorial
+description: >
+  Interactive tutorial containing figures, videos, R exercises and quiz questions.
+create_dir: true

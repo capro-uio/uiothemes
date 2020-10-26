@@ -21,7 +21,14 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.com/Athanasiamo/uiothemes.svg?branch=master)](https://travis-ci.com/Athanasiamo/uiothemes)
 <!-- badges: end -->
 
-The goal of uiothemes is to ...
+The goal of uiothemes is to provide branded templates for the University of Oslo for commonly used R markdown packages. 
+Currently the package contains:
+- Presentation template for the [xaringan](https://slides.yihui.org/xaringan/#1)-package  
+- Tutorial template for the [learnr](https://rstudio.github.io/learnr/)-package
+- Website template for the [Distill](https://rstudio.github.io/distill/website.html)-package  
+- Article template for the [Distill](https://rstudio.github.io/distill/basics.html)-package  
+- Themes for the [ggplot2](https://ggplot2.tidyverse.org/)-package  
+- Colour and fill scales for the [ggplot2](https://ggplot2.tidyverse.org/)-package  
 
 ## Installation
 You can install uiothemes from github
@@ -36,12 +43,44 @@ remotes::install_github("Athanasiamo/uiothemes")
 <!-- install.packages("uiothemes") -->
 <!-- ``` -->
 
-## Example
+## Basic use
 
-This is a basic example which shows you how to solve a common problem:
+xaringan presentation, learnr tutorial and distill article tempaltes with UiO branding can be access easily using the RStudio IDE, by selecing `File` -> `R markdown ...` -> `From Template`.
 
-```{r example}
-library(uiothemes)
-## basic example code
+
+```{r, echo = FALSE, out.width="50%"}
+knitr::include_graphics("man/figures/README-template.png")
 ```
-!
+
+Distill website template can be access most easily through the RStudio IDE to create a new project.
+`File` -> `New project...` -> `New Directory` -> `UiO Distill Website`
+
+```{r, echo = FALSE, out.width="50%"}
+knitr::include_graphics("man/figures/README-project.png")
+```
+
+
+### ggplot2 branding
+
+The ggplot branding is applied through themes and scales.
+
+```{r, fig.retina=3}
+library(uiothemes)
+library(ggplot2)
+
+ggplot(mtcars, aes(mpg, disp, colour = cyl)) +
+  geom_point(size = 5) +
+  scale_colour_uio(discrete = FALSE) +
+  theme_uio() +
+  labs(title = "The fonts and colours are UiO specific",
+       subtitle = "and can provide coherent plot branding")
+
+ggplot(mtcars, aes(mpg, disp, colour = cyl)) +
+  geom_point(size = 5) +
+  scale_colour_uio(palette = "redwhite", discrete = FALSE) +
+  theme_uio_dark() +
+  labs(title = "The fonts and colours are UiO specific",
+       subtitle = "and can provide coherent plot branding")
+
+```
+
