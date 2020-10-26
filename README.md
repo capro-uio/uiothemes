@@ -15,17 +15,19 @@ status](https://travis-ci.com/Athanasiamo/uiothemes.svg?branch=master)](https://
 
 The goal of uiothemes is to provide branded templates for the University
 of Oslo for commonly used R markdown packages. Currently the package
-contains: - Presentation template for the
-[xaringan](https://slides.yihui.org/xaringan/#1)-package  
-\- Tutorial template for the
-[learnr](https://rstudio.github.io/learnr/)-package - Website template
-for the
-[Distill](https://rstudio.github.io/distill/website.html)-package  
-\- Article template for the
-[Distill](https://rstudio.github.io/distill/basics.html)-package  
-\- Themes for the [ggplot2](https://ggplot2.tidyverse.org/)-package  
-\- Colour and fill scales for the
-[ggplot2](https://ggplot2.tidyverse.org/)-package
+contains:
+
+  - Presentation template for the
+    [xaringan](https://slides.yihui.org/xaringan/#1)-package  
+  - Tutorial template for the
+    [learnr](https://rstudio.github.io/learnr/)-package  
+  - Website template for the
+    [distill](https://rstudio.github.io/distill/website.html)-package  
+  - Article template for the
+    [distill](https://rstudio.github.io/distill/basics.html)-package  
+  - Themes for the [ggplot2](https://ggplot2.tidyverse.org/)-package  
+  - Colour and fill scales for the
+    [ggplot2](https://ggplot2.tidyverse.org/)-package
 
 ## Installation
 
