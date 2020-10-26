@@ -1,11 +1,12 @@
 
 # adapted from https://github.com/rstudio/distill/blob/master/R/create.R
 # So that we can easily create new distill pages with uio themeing.
+# Lots of internal calling, just get it working for now
 create_uio_distill_website <- function(dir,
                                        title,
                                        gh_pages = FALSE,
                                        edit = interactive()){
-
+  type <- "distill-uio-website"
   tmp <- distill:::do_create_website(dir = dir,
                                  title = title,
                                  gh_pages = gh_pages,
@@ -14,12 +15,12 @@ create_uio_distill_website <- function(dir,
 
 
   # copy template files
-  css <- system.file(file.path("rmarkdown", "templates","project", "uio-distill.css"),
+  css <- system.file(file.path("rstudio", "templates","project", type, "uio-distill.css"),
                           package = "uiothemes")
   k <- file.copy(css, file.path(dir, "uio-distill.css"))
 
   render_website_template <- function(file, data = list()) {
-    uiothemes_render_template(file, type = "distill-uio-website", dir, data)
+    uiothemes_render_template(file, type = type, dir, data)
   }
   render_website_template("_site.yml", data = list(
     name = basename(dir),
@@ -32,7 +33,7 @@ create_uio_distill_website <- function(dir,
   if (edit)
     distill:::edit_file(file.path(dir, "index.Rmd"))
 
-  distill:::render_website(dir, "distill-uio-website")
+  distill:::render_website(dir, type)
 }
 
 
@@ -47,7 +48,7 @@ new_project_create_website <- function(dir, ...) {
 
 
 uiothemes_render_template <- function(file, type, target_path, data = list()) {
-  template <- system.file(file.path("rmarkdown", "templates", "project", type, file),
+  template <- system.file(file.path("rstudio", "templates", "project", type, file),
                           package = "uiothemes")
   template <- paste(readLines(template, encoding = "UTF-8"), collapse = "\n")
   output <- whisker::whisker.render(template, data)
