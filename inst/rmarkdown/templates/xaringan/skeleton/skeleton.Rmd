@@ -1,0 +1,129 @@
+---
+title: "UiO presentation"
+subtitle: "- some tagline -"
+author: "Athanasia Monika Mowinckel"
+date: "The Date"
+output:
+  xaringan::moon_reader:
+    css: [uio.css, default]
+    lib_dir: libs
+    nature:
+      titleSlideClass: [middle, right]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false 
+      ratio: "16:9"
+---
+
+layout: true
+    
+<div class="logo"></div> 
+
+
+```{r setup, include=FALSE}
+# Here you can place global options for the entire document.
+# Mostly used for knitr settings, but can also load data etc.
+# Whatever happens here will not show in the presentation.
+knitr::opts_chunk$set(fig.retina = 3, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      echo = TRUE)
+```
+
+---
+
+
+# Heading 1
+There are several heading levels. 
+
+## Heading 2
+depending on your hierarchy
+
+maybe some latex math? 
+$$\large x = \frac{y}{z} $$
+
+And some **bold** and  _italics_ text? 
+
+Three dashes make a new slide
+---
+# Add some R code
+```{r}
+plot(mtcars$mpg)
+```
+
+---
+
+# Create two columns and mute the R code
+
+.pull-left[
+```{r, echo=F}
+library(ggplot2)
+
+ggplot(mtcars, aes(mpg, cyl)) +
+  geom_point()
+```
+]
+
+.pull-right[
+This text goes in the right-hand column, while the plot is placed in the left-hand column
+]
+
+
+
+---
+class: red, middle, center
+
+# You can also have some special slides
+## by specifying classes right after the `---`
+
+---
+class: red
+
+# and make lists
+
+- something  
+- something more
+
+1. numbered lists
+1. number two list
+
+---
+class: black, middle
+
+# a black slide with middle centering
+
+
+---
+class: black
+
+# or even with a black slide!
+because black is cool, right?
+
+---
+layout: false
+class: title-slide
+
+# or the title-slide again as a section separator
+adding `layout: false` cancels the logo for all slides following it
+
+---
+layout: true
+<div class="logo"></div> 
+
+<!-- Re-add logo by adding a blank slide with this content -->
+---
+
+But it can be re-added  using a black slide with 
+```bash
+layout: true
+<div class="logo"></div> 
+```
+
+at the top.
+
+---
+
+# Have fun!
+
+
+

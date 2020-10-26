@@ -1,0 +1,161 @@
+
+/**************/
+/**** text ****/
+/**************/
+body { font-family: Arial, Helvetica, sans-serif;}
+
+h1, h2, h3 {
+  font-family: Georgia, Serif;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2em;
+}
+
+h2, h3 {
+  color: #000;
+}
+
+p,  a,  code, ul, li {
+  font-size: 1.2em;
+  color: #000;
+}
+
+a, a > code {
+  color: #FF0000;
+}
+
+ul li::marker {
+  color: #ff0000; !important
+}
+
+
+/**********/
+/* remark */
+/**********/
+.remark-code-line-highlighted {
+  background-color: #FF000060;
+}
+
+.remark-slide-content {
+  background-color: #fff;
+  border-top: 5em solid #000;
+}
+
+.remark-slide-content > h1 {
+  margin-top: -100px;
+}
+
+.middle {
+  border: none;
+}
+
+.no-border {
+  border: none; !important
+}
+
+
+/***************/
+/* title slide */
+/***************/
+
+.title-slide {
+  padding: 20px;
+  border: none;
+  background-color: #fff;
+  background-origin: padding-box;
+  background-size: 60%, 100;
+  background-position: 10% 90%, center;
+  background-color: #fff;
+  background-image:  url("uio_front.png"), -webkit-linear-gradient(65deg, #FFF 35%, #000 35%);
+}
+
+.title-slide h1,
+.title-slide h2,
+.title-slide h3{
+  border: none;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+/***************/
+/***** red *****/
+/***************/
+.red {
+  border-color: #dd0000;
+  text-shadow: none;
+}
+
+.red h1 {
+  color: #fff;
+}
+
+.middle.red,
+.red.middle {
+  background-color: #dd0000;
+}
+
+.middle.red h1,
+.red.middle h1,
+.middle.red h2,
+.red.middle h2,
+.middle.red h3,
+.red.middle h3,
+.red.middle p {
+  color: #fff;
+}
+
+.red.middle ul > li::marker ,
+.middle.red ul > li::marker {
+  color: #fff;
+}
+
+/***************/
+/**** black ****/
+/***************/
+.black {
+  background-color: #000;
+  border-color: #fff;
+  text-shadow: none;
+  color: #fff;
+}
+
+.black h1{
+  border: none;
+  color: #000;
+}
+
+.black.middle > h1,
+.middle.black > h1{
+  color: #fff;
+}
+
+
+/************************/
+/* Logo on the side div */
+/************************/
+div.logo {
+    position: fixed;
+    right: 69%;
+    bottom: 45%;
+    height: 2.5em;
+    width: calc(100% * .55); /* fix sidebar height */
+    padding: 0.5em;
+    opacity: 0.7;
+    background-color: #fff;
+    background-position: left;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("uio_logo.png"),
+    linear-gradient(70deg, #fff, #ffffff00 30%);
+    transform: rotate(-90deg);
+}
