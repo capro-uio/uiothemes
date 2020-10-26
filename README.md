@@ -48,9 +48,9 @@ remotes::install_github("Athanasiamo/uiothemes")
 
 ## Basic use
 
-xaringan presentation, learnr tutorial and distill article tempaltes
+xaringan presentation, learnr tutorial and distill article templates
 with UiO branding can be access easily using the RStudio IDE, by
-selecing `File` -\> `R markdown ...` -\> `From Template`.
+selecting `File` -\> `R markdown ...` -\> `From Template`.
 
 <img src="man/figures/README-template.png" width="50%" />
 
@@ -59,6 +59,60 @@ IDE to create a new project. `File` -\> `New project...` -\> `New
 Directory` -\> `UiO Distill Website`
 
 <img src="man/figures/README-project.png" width="50%" />
+
+**Previews**
+
+<div style="text-align: center;">
+
+<div class="figure">
+
+<img src="man/figures//preview-article.png" alt="Distill article" width="50%" />
+
+<p class="caption">
+
+Distill article
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures//preview-presentation.png" alt="Xaringan presentation" width="50%" />
+
+<p class="caption">
+
+Xaringan presentation
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures//preview-tutorial.png" alt="Learnr tutorial" width="50%" />
+
+<p class="caption">
+
+Learnr tutorial
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures//preview-website.png" alt="Distill website" width="50%" />
+
+<p class="caption">
+
+Distill website
+
+</p>
+
+</div>
+
+</div>
 
 ### ggplot2 branding
 
@@ -76,7 +130,7 @@ ggplot(mtcars, aes(mpg, disp, colour = cyl)) +
        subtitle = "and can provide coherent plot branding")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ``` r
 
@@ -88,4 +142,4 @@ ggplot(mtcars, aes(mpg, disp, colour = cyl)) +
        subtitle = "and can provide coherent plot branding")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-2.png" width="100%" />

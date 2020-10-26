@@ -46,7 +46,7 @@ remotes::install_github("Athanasiamo/uiothemes")
 
 ## Basic use
 
-xaringan presentation, learnr tutorial and distill article tempaltes with UiO branding can be access easily using the RStudio IDE, by selecing `File` -> `R markdown ...` -> `From Template`.
+xaringan presentation, learnr tutorial and distill article templates with UiO branding can be access easily using the RStudio IDE, by selecting `File` -> `R markdown ...` -> `From Template`.
 
 
 ```{r, echo = FALSE, out.width="50%"}
@@ -60,6 +60,13 @@ Distill website template can be access most easily through the RStudio IDE to cr
 knitr::include_graphics("man/figures/README-project.png")
 ```
 
+**Previews**
+
+<div style="text-align: center;">
+```{r, echo = FALSE, out.width="50%", fig.cap=c("Distill article", "Xaringan presentation", "Learnr tutorial", "Distill website")}
+knitr::include_graphics(list.files("man/figures/", "preview", full.names = TRUE))
+```
+</div>
 
 ### ggplot2 branding
 
