@@ -13,11 +13,13 @@ create_uio_distill_website <- function(dir,
                                  type = "website",
                                  edit = FALSE) # dont open before adapting files
 
-
   # copy template files
-  css <- system.file(file.path("rstudio", "templates","project", type, "uio-distill.css"),
+  theme_dir <- system.file(file.path("rstudio", "templates","project", type, "theme"),
                           package = "uiothemes")
-  k <- file.copy(css, file.path(dir, "uio-distill.css"))
+  theme_files <- list.files(theme_dir)
+  k <- if(!dir.exists(file.path(dir, "theme"))) dir.create(file.path(dir, "theme"))
+
+  k <- lapply(theme_files, function(x) file.copy(file.path(theme_dir, x), file.path(dir,"theme", x)))
 
   render_website_template <- function(file, data = list()) {
     uiothemes_render_template(file, type = type, dir, data)

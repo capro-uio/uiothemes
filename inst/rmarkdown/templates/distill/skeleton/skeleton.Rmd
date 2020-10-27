@@ -10,9 +10,9 @@ author:
 date: "`r Sys.Date()`"
 output: 
   distill::distill_article:
-    theme: uio-distill.css
+    theme: theme/uio-distill.css
     toc: true
-    highlight: "uio_highlight.theme"
+    highlight: theme/uio_highlight.theme
     highlight_downlit: false
 ---
 

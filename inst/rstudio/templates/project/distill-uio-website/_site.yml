@@ -3,9 +3,10 @@ title: "{{title}}"
 description: |
   {{title}}
 output_dir: "{{output_dir}}"
-theme: "uio-distill.css"
-highlight: "uio_highlight.theme"
+theme: theme/uio-distill.css
+highlight: theme/uio_highlight.theme
 highlight_downlit: false
+favicon: theme/uio_dots.png
 navbar:
   right:
     - text: "Home"

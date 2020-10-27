@@ -65,7 +65,6 @@ ul li::marker {
 .title-slide {
   padding: 20px;
   border: none;
-  background-color: #fff;
   background-origin: padding-box;
   background-size: 60%, 100;
   background-position: 10% 90%, center;
