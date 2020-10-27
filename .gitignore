@@ -5,3 +5,4 @@
 *.Rproj*
 docs
 docs/
+**.DS_Store
