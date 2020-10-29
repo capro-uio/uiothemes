@@ -8,6 +8,4 @@ deploy:
   script: Rscript -e 'pkgdown::deploy_site_github(ssh_id = Sys.getenv("TRAVIS_DEPLOY_KEY_COM", ""))'
   skip_cleanup: true
   on:
-    branches:
-      only:
-        - main
+    branches: main
